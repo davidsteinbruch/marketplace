@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "71e0aae3-8a52-40cf-bcb8-3002377284b3",
+		"name": "marketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7017/api/books",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7017",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"The Intelligent Investor\",\r\n    \"Description\": \"The Definitive Book on Value Investing\",\r\n    \"Author\": \"Benjamin Graham\",\r\n    \"Image\": \"https://images-na.ssl-images-amazon.com/images/I/41vQ4DGEmoL._SX325_BO1,204,203,200_.jpg\",\r\n    \"Price\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7017/api/books",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7017",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7017/api/books/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7017",
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Rich Dad Poor Dad\",\r\n    \"description\": \"What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!\",\r\n    \"author\": \"Robert T. Kiyosaki\",\r\n    \"image\": \"https://images-na.ssl-images-amazon.com/images/I/51u8ZRDCVoL._SX330_BO1,204,203,200_.jpg\",\r\n    \"price\": 90\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7017/api/books/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7017",
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a book by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7017/api/books/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7017",
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
